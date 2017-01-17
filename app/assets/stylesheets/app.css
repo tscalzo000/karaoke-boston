@@ -1,0 +1,54 @@
+#body {
+  color: #32d4e4;
+  font-family: serif;
+}
+
+#title {
+  font-size: 50px;
+  color: #28e446;
+}
+
+#details {
+  font-size: 20px;
+}
+
+#days {
+  font-size: 30px;
+}
+
+#create {
+  font-size: 40px;
+  color: #28e446;
+}
+
+#flash {
+  padding: 1em;
+  background-color: #f256e3;
+  color: #010802;
+}
+
+#container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+a,
+a:link {
+  color: #28e446;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #28e446;
+  text-decoration: none;
+}
+
+#sidebar {
+  background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,.5));
+  color: white;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 10px;
+  position: fixed;
+}

@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>KaraokeBoston</title>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <title><%= content_for?(:title) ? yield(:title) : "Karaoke Boston" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <div id='body'>
+    <body>
+      <% if flash.any? %>
+        <div id="flash" class='small-9 columns float-right'>
+          <div id="container">
+            <%= flash[:notice] %>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="side-nav small-3 columns" id='sidebar'>
+        <p><%= link_to 'All Karaoke Bars', bars_path %></p>
+        <p><%= link_to 'Karaoke Bars By Weekday', days_path %></p>
+        <p><%= link_to 'Free/No Cover Charge Karaoke Bars', free_index_path %></p>
+        <p><%= link_to 'Verified Karaoke Bars Only', verified_index_path %></p>
+        <p><%= link_to 'Create New Karaoke Bar Listing', new_bar_path %></p>
+      </div>
+
+      <div id='main' class='small-9 columns'>
+        <%= yield %>
+      </div>
+
+    </body>
+  </div>
 </html>

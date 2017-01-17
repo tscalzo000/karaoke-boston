@@ -1,0 +1,41 @@
+<%= form_for @bar do |f| %>
+
+  <div class="field">
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address, "Address" %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :day, "Weekday" %>
+    <%= f.select :day, options_for_select(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time, "Time" %>
+    <%= f.text_field :time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :website, "Website" %>
+    <%= f.text_field :website %>
+  </div>
+
+  <div class="field">
+    <%= f.label :details, "Details" %>
+    <%= f.text_area :details %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cover_charge, "Cover Charge?" %>
+    <%= f.check_box :cover_charge %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit value='Submit' %>
+  </div>
+<% end %>

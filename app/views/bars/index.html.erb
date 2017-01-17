@@ -1,0 +1,14 @@
+<div id='title'>Karaoke Boston</div>
+
+<div id='details'>
+  <p>
+    Looking for some karaoke in the Boston area? You've come to the right place!
+  </p>
+</div>
+
+<% @bars.each do |bar| %>
+  <p>
+    <%= link_to bar.name, bar %> - <%= bar.day %> - <%= bar.time %><br/>
+    Verified: <%= bar.verified %> // Cover Charge: <%= bar.cover_charge %>
+  </p>
+<% end %>
