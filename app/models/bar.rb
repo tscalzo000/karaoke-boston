@@ -6,5 +6,4 @@ class Bar < ApplicationRecord
   validates :website, presence: true
   validates :details, presence: true
 
-  
 end

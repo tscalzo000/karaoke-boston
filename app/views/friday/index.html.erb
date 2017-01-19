@@ -1,8 +1,0 @@
-<div id='title'>Friday Karaoke</div>
-
-<% @bars.each do |bar| %>
-  <p>
-    <%= link_to bar.name, bar %> - <%= bar.day %> - <%= bar.time %><br/>
-    Verified: <%= bar.verified %> // Cover Charge: <%= bar.cover_charge %>
-  </p>
-<% end %>

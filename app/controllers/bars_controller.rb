@@ -1,6 +1,6 @@
 class BarsController < ApplicationController
   def index
-    @bars = Bar.all.order(verified: :desc, name: :asc)
+    @bars = Bar.all.order(name: :asc)
   end
 
   def show

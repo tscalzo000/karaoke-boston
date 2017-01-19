@@ -3,11 +3,7 @@
 </div>
 
 <div class='text-center' id='days'>
-<p><%= link_to 'Monday', monday_index_path %></p>
-<p><%= link_to 'Tuesday', tuesday_index_path %></p>
-<p><%= link_to 'Wednesday', wednesday_index_path %></p>
-<p><%= link_to 'Thursday', thursday_index_path %></p>
-<p><%= link_to 'Friday', friday_index_path %></p>
-<p><%= link_to 'Saturday', saturday_index_path %></p>
-<p><%= link_to 'Sunday', sunday_index_path %></p>
+  <% @days.each do |day| %>
+    <p><%= link_to day.name, day %></p>
+  <% end %>
 </div>
