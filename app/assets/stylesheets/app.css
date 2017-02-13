@@ -9,7 +9,7 @@
 }
 
 #details {
-  font-size: 20px;
+  font-size: 23px;
 }
 
 #days {
@@ -23,8 +23,10 @@
 
 #flash {
   padding: 1em;
-  background-color: #f256e3;
+  background: linear-gradient(rgba(242,86,227, .5), rgba(242,86,227, .5));
   color: #010802;
+  font-family: serif;
+  margin-bottom: 0;
 }
 
 #container {
@@ -51,4 +53,8 @@ a:visited {
   bottom: 0;
   padding: 10px;
   position: fixed;
+}
+
+#bars {
+  font-size: 25px;
 }
