@@ -1,12 +1,12 @@
-<div id='title'>
-  <%= @bar.name %>
+<div>
+  <div id='title'>
+    <%= @bar.name %>
+  </div>
+
+  <p><%= @bar.details %></p>
+  <p>When: <%= @bar.day %> @ <%= @bar.time %></p>
+  <p>Address: <%= @bar.address %></p>
+  <p>Website: <a href='<%=@bar.website%>'><%= @bar.website %></a></p>
+  <p>Cover charge? <%= @bar.cover_charge %></p>
+  <p>Verified? <%= @bar.verified %></p>
 </div>
-
-<p><%= @bar.details %></p>
-<p>When: <%= @bar.day %> - <%= @bar.time %></p>
-<p>Address: <%= @bar.address %></p>
-<p>Website: <a href='<%=@bar.website%>'><%= @bar.website %></a></p>
-<p>Cover charge? <%= @bar.cover_charge %></p>
-<p>Verified? <%= @bar.verified %></p>
-
-<%= link_to 'All Karaoke Bars', bars_path %>

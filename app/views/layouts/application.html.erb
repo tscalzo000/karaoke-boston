@@ -13,15 +13,32 @@
 
   <div id='body'>
     <body>
-      <% if flash.any? %>
-        <div id="flash" class='small-9 columns float-right'>
+      <% if notice %>
+        <div id="flash" class='small-9 small-offset-3 columns'>
           <div id="container">
-            <%= flash[:notice] %>
+              <div class="alert alert-success"><%= notice %></div>
+          </div>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div id="flash" class='small-9 small-offset-3 columns'>
+          <div id="container">
+            <div class="alert alert-danger"><%= alert %></div>
           </div>
         </div>
       <% end %>
 
       <div class="side-nav small-3 columns" id='sidebar'>
+        <p>
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.<br/>
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        <% end %>
+        </p>
         <p><%= link_to 'All Karaoke Bars', bars_path %></p>
         <p><%= link_to 'Karaoke Bars By Weekday', days_path %></p>
         <p><%= link_to 'Free/No Cover Charge Karaoke Bars', free_index_path %></p>
@@ -29,7 +46,7 @@
         <p><%= link_to 'Create New Karaoke Bar Listing', new_bar_path %></p>
       </div>
 
-      <div id='main' class='small-9 columns'>
+      <div id='main' class='small-9 small-offset-3 columns float-left'>
         <%= yield %>
       </div>
 
