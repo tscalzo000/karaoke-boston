@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Welcome to Karaoke Boston! 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is an in-progress application for local karaoke bars. Right now there is basic sign-in capabilities, the ability to add listings. Eventually I will add admin sign-ins to validate listings and there will be more ways to sort the bars. Additionally, I plan on implementing Google Maps to show bars nearby.
